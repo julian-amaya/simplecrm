@@ -1,0 +1,6 @@
+Django==1.4
+Fabric==1.4.1
+South==0.7.4
+pycrypto==2.5
+ssh==1.7.13
+wsgiref==0.1.2
