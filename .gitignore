@@ -1,0 +1,13 @@
+*.pyc
+*~
+*.project
+/media/.sass-cache
+/_res/css/.sass-cache/
+/_res/landing/.sass-cache/
+_res/.sass-cache
+_res/landing/.sass-cache
+media/
+static/
+*.pydevproject
+.settings
+*.DS_Store
