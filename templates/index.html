@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} SIMPLECRM {% endblock %}
+{% block content %}
+<h1>SimpleCRM - Listado de empresas</h1>
+		
+        <ul>
+        	{% for company in companies %}
+        	<li><a href="{{company.get_absolute_url}}">{{company.name}}</a>
+                <a href="#url_editar">Administrar</a>
+            </li>{% endfor %}
+        	{% comment %}
+            <li><a href="#url_empresa">Empresa 1</a>
+                <a href="#url_editar">Administrar</a>
+            </li>
+            <li><a href="#url_empresa">Monoku </a>
+                <a href="#url_editar">Administrar</a>
+            </li>
+            <li><a href="#url_empresa">Bogodev</a>
+                <a href="#url_editar">Administrar</a>
+            </li>
+            {% endcomment %}
+</ul>
+</nav>
+
+{% endblock %}
