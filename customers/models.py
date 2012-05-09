@@ -12,7 +12,8 @@ class Company(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('company',args=[self.id])
+        # TALLER!!!
+        return ''
 
 class Customer(models.Model):
     """ A client"""

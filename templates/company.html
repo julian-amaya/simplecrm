@@ -5,23 +5,18 @@
     <nav> 
 
         <ul>
-        	{% for customer in customers %}
-            <li><a href="#url_empresa">{{customer.name}}</a>
-                <a href="#url_editar">Administrar</a>
-            </li>{% endfor %}
-            {% comment %}
             <li><a href="#url_empresa">David </a>
                 <a href="#url_editar">Administrar</a>
             </li>
             <li><a href="#url_empresa">Jose</a>
                 <a href="#url_editar">Administrar</a>
-            </li>{% endcomment %}
+            </li>
 </ul>
 </nav>
 <h3> Agregar otro cliente <h3>
 <form action="" method="POST">
     {% csrf_token %}
-{{ c_form.as_p }}
+    
 <input type="submit" value="Agregar">
 </form>
 {% endblock %}
