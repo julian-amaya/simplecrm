@@ -5,13 +5,11 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'simplecrm.views.home', name='home'),
-    # url(r'^simplecrm/', include('simplecrm.foo.urls')),
+    #URL de listado de clientes
+    url(r'^$', 'customers.views.index', name='home'),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
+    # TALLER agregar la url para la vista de cada cliente
+	url(r'^c/(?P<id_company>(\d)+)/$', 'customers.views.company', name='company'),
+    
     url(r'^admin/', include(admin.site.urls)),
 )

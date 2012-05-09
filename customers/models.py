@@ -1,6 +1,8 @@
 # -- coding: utf-8 --
 from django.db import models
 
+from django.core.urlresolvers import reverse
+
 class Company(models.Model):
     """ A company """
     name = models.CharField(max_length=300)
@@ -9,11 +11,14 @@ class Company(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('company',args=[self.id])
+
 class Customer(models.Model):
     """ A client"""
     name = models.CharField(max_length=300)
     last_name = models.CharField(max_length=300)
-    company = models.ForeignKey(Company, blank=True,null=True)
+    company = models.ForeignKey(Company, blank=True,null=True, related_name='employees')
     age = models.IntegerField(blank=True,null=True)
     phone = models.CharField(max_length=20,blank=True)
 
